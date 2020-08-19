@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+        <title>
+                SHOP
+        </title>
+
+        <!-- link css file -->
+        <link rel="stylesheet" type="text/css" href="basic.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster&effect=brick-sign">
+
+        <!-- link javascript -->
+        <script src="script.js"> </script>
+</head>
+
+<body id="body">
+        <div id="heading">
+                <div class="w3-container w3-lobster">
+                        <h1 class="w3-xxxlarge">
+                                INDIAN MEGA MART
+                        </h1>
+                </div>
+        </div>
+
+        <div id="build_form">
+                <form>
+
+
+                        <div id="tohide" style="display: block;">
+                                <!-- INPUT FIRST AND LAST NAME
+                                EXTRA
+                                onhover:
+                                use javascript to change background on entering name ( photo of user blurred)  change_background_enter_name() -->
+                                <div id="name">
+                                        <input type="text" id="First_name" placeholder="First Name" required >
+                                        <input type="text" id="Last_name" placeholder="Last Name" required>
+                                        <br>
+                                </div>
+
+                        
+                        
+                        
+                        
+                        
+                                <!-- contact Details
+                                        1)MAIL
+                                                radio button: gmail , yahoo , other
+                                                        on click input type text with value @xyz.com
+                                                                                for other input type text --place holder enter email id
+                                                                                
+                                        2) phone number : 10 digit phone number 
+                                                        1)check function by javascript for validating pattern  validate_phone_number() --> 
+        <!-- 
+                                EXTRA:
+                                onhover:
+                                use javascript to change background on clicking mail(photo of mail box) change_backgroud_mail()
+                                use javascript to change background on entering phone number ( photo of mobile blurred)  change_background_phone_number() -->
+
+
+                                <div id="contact">
+                                        <h2>
+                                                Contact Details
+                                        </h2>
+                                
+                                        <!-- mail -->
+                                        <div id="email">
+                                                <!--  mail features -->          
+                                
+                                                <div id="choose_mail" style="display: block;">   
+                                                        Choose Mail:
+                                                        <br>               
+                                                        
+                                                        <label name="email" class="container">Gmail
+                                                        <input type="radio" id="mail_radio1" name="email" onclick="create_gmail();">
+                                                        <span class="checkmark"></span>
+                                                        </label>
+                                                        
+
+                                                        <label name="email" class="container">Yahoo
+                                                        <input type="radio" id="mail_radio2" name="email" onclick="create_yahoo();">
+                                                        <span class="checkmark"></span>
+                                                        </label>
+
+
+                                                        <label name="email" class="container">Custom
+                                                        <input type="radio" id="mail_radio3" name="email" onclick="create_custom();">
+                                                        <span class="checkmark"></span>
+                                                        </label>
+
+
+                                                </div>
+                                                <div id="enter_gmail" style="display: none;">
+                                                        Enter-Email : <br>
+                                                        Gmail:
+                                                        <input type="email" value="@gmail.com" required style="text-align: end;">
+                                                </div>
+
+                                                <div id="enter_yahoo" style="display: none;">
+                                                        Enter-Email : <br>
+                                                        Yahoo:
+                                                        <input type="email" value="@yahoo.com" required style="text-align: end;">
+                                                </div>
+
+                                                <div id="enter_custom" style="display: none;">
+                                                        Other:
+                                                        <input type="email" value="@" required style="text-align:center;">
+                                                </div>
+                                                <br>
+                                        </div>
+
+                                        <!-- number -->
+                                        <div id="contact">
+                                                <!-- phone number features -->
+                                                <input type="number" id="phone_number" placeholder="Contact Number" required onblur="validate_phone_number();">
+                                                <span id="phone_number_prompt"> xxxxxxxxxx </span>
+
+                                        </div>
+
+                                </div>
+
+
+
+
+
+                                <!-- PERSONAL INFORMATION (address)
+                                EXTRA:
+                                onhover->
+                                use javascript to change background on entering adress ( photo of home blurred)  change_background_address() -->
+
+
+                                <div id="personal_information">
+                                        <h2>
+                                                Personal Information
+                                        </h2>
+
+                                        <!-- address 
+                                                state->district->permanent address->landmark -> pincode 
+                                                
+                                                for pincode validation : use javascript pattern : function name -- validate_pincode() :
+                                        -->
+
+                                        <div id="Address">
+                                                <!-- <input type="text" name="Address" placeholder="State" required> -->
+                                                <label for="states"></label>
+                                                <select id="statess" name="states">
+                                                        <option value="">--Choose your State--</option>
+                                                        <option id = "states" onclick="show_district();" value="Andhra Pradesh">Andhra Pradesh</option>
+                                                        <option id = "states" onclick="show_district();" value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                        <option id = "states" onclick="show_district();" value="Assam">Assam</option>
+                                                        <option id = "states" onclick="show_district();" value="Bihar">Bihar</option>
+                                                        <option id = "states" onclick="show_district();" value="Chhattisgarh">Chhattisgarh</option>
+                                                        <option id = "states" onclick="show_district();" value="Goa">Goa</option>
+                                                        <option id = "states" onclick="show_district();" value="Gujarat">Gujarat</option>
+                                                        <option id = "states" onclick="show_district();" value="Haryana">Haryana</option>
+                                                        <option id = "states" onclick="show_district();" value="Himachal Pradesh">Himachal Pradesh</option>
+                                                        <option id = "states" onclick="show_district();" value="Jharkhand">Jharkhand</option>
+                                                        <option id = "states" onclick="show_district();" value="Karnataka">Karnataka</option>
+                                                        <option id = "states" onclick="show_district();" value="Kerala">Kerala</option>
+                                                        <option id = "states" onclick="show_district();" value="Madhya Pradesh">Madhya Pradesh</option>
+                                                        <option id = "states" onclick="show_district();" value="Maharashtra">Maharashtra</option>
+                                                        <option id = "states" onclick="show_district();" value="Manipur">Manipur</option>
+                                                        <option id = "states" onclick="show_district();" value="Meghalaya">Meghalaya</option>
+                                                        <option id = "states" onclick="show_district();" value="Mizoram">Mizoram</option>
+                                                        <option id = "states" onclick="show_district();" value="Nagaland">Nagaland</option>
+                                                        <option id = "states" onclick="show_district();" value="Odisha">Odisha</option>
+                                                        <option id = "states" onclick="show_district();" value="Punjab">Punjab</option>
+                                                        <option id = "states" onclick="show_district();" value="Rajasthan">Rajasthan</option>
+                                                        <option id = "states" onclick="show_district();" value="Sikkim">Sikkim</option>
+                                                        <option id = "states" onclick="show_district();" value="Tamil Nadu">Tamil Nadu</option>
+                                                        <option id = "states" onclick="show_district();" value="Telangana">Telangana</option>
+                                                        <option id = "states" onclick="show_district();" value="Tripura">Tripura</option>
+                                                        <option id = "states" onclick="show_district();" value="Uttar Pradesh">Uttar Pradesh</option>
+                                                        <option id = "states" onclick="show_district();" value="Uttarakhand">Uttarakhand</option>
+                                                        <option id = "states" onclick="show_district();" value="West Bengal">West Bengal</option>
+                                                </select>
+
+
+                                                <input type="text" name="Address" placeholder="District" required>
+                                                <br>
+
+                                                <br>
+                                                <input type="text" name="Address" placeholder="Permanent Address" required>
+                                                <input type="text" name="Address" placeholder="Landmark">
+                                                <br>
+                                                <br>
+                                                <input type="number" id="pincode" name="Address" placeholder="Pincode"  onblur="validate_pincode();" required>
+                                                
+                                                <!-- function part   ---  validation function -->
+                                                <span id="pincode_prompt">
+                                                        xxxxxx
+                                                </span>
+
+                                        </div>
+                                </div>
+                        </div>
+                        
+                        
+                        
+                        
+                        <!-- Choose items(button)
+                        on click - radio buttons : Food, fruit,stationary,fashion,electronics
+                                        on choosing : check box (format )  Checkbox | ItemName |  Price -->
+                        <div id="choose_items" style="display: block;">
+                                <br>
+                                <div id="choose_items_button" style="display: block;">
+                                        <button onclick="display_items();" class="button" style="vertical-align: middle;"> Choose Items</button>
+                                </div>  
+
+                                <div id="display_items" style="display: none;">
+                                        Choose items: 
+                                        <br>
+                                        <!-- radio -->
+                                        <input type="checkbox" name="Item_name" id="Fastfood" onclick="display_subitems_fastfood();">
+                                        <label for="Item_name">Fast Food</label>
+
+                                        <div id="subitems_fastfood" style="display: none;">
+                                                <label>
+                                                        <input type="checkbox" name="fast_food" value="20.00">
+                                                        Maggi
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="fast_food" value="60.00">
+                                                        Burger
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="fast_food" value="200.00" >
+                                                        Pizza
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="fast_food" value="30.00">
+                                                        Rolls
+                                                </label>
+                                                <br>
+                                                
+                                                <script>
+                                                        add_fastfood_price();
+                                                </script>
+
+                                                Price:<input type="number" name="price_for_fastfood" id="price_for_fastfood" value="0.00" readonly> (INR)
+                                        </div>
+                                        
+                                        <br>
+
+
+
+
+                                        <input type="checkbox" id="Fruit" name="Item_name" onclick="display_subitems_fruit()">
+                                        <label for="Item_name">Fruit</label>
+
+                                        <div id="subitems_fruit" style="display: none;">
+                                                <label>
+                                                        <input type="checkbox" name="fruit" value="220.00">
+                                                        Apple
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="fruit" value="60.00">
+                                                        Banana
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="fruit" value="100.00">
+                                                        Mango
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="fruit" value="70.00">
+                                                        Orange
+                                                </label>
+                                                <br>
+
+                                                <script>
+                                                        add_fruit_price();
+                                                </script>
+
+                                                Price:<input type="number" name="price_for_fruit" id="price_for_fruit" value="0.00" readonly>(INR)
+                                        </div>
+                                        <br>
+
+                                        <input type="checkbox" id="Stationary" name="Item_name" onclick="display_subitems_stationary()">
+                                        <label for="Item_name">Stationary</label>
+
+                                        <div id="subitems_stationary" style="display: none;">
+                                                <label>
+                                                        <input type="checkbox" name="Stationary" value="10.00">
+                                                        Pen
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Stationary" value="5.00">
+                                                        Pencil
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Stationary" value="100.00">
+                                                        Books
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Stationary" value="40.00">
+                                                        Copy
+                                                </label>
+                                                <br>
+
+                                                <script>
+                                                        add_Stationary_price();
+                                                </script>
+
+                                                Price:<input type="number" name="price_for_stationary" id="price_for_stationary" value="0.00" readonly>(INR)
+                                        </div>
+
+                                        <br>
+
+                                        
+                                        
+                                        <input type="checkbox" id="Fashion" name="Item_name" onclick="display_subitems_fashion()">
+                                        <label for="Item_name">Fashion</label>
+
+                                        <div id="subitems_fashion" style="display: none;">
+                                                <label>
+                                                        <input type="checkbox" name="Fashion" value="10.00">
+                                                        Dress
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Fashion" value="5.00">
+                                                        Socks
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Fashion" value="100.00">
+                                                        Shoe
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Fashion" value="40.00">
+                                                        Ornaments
+                                                </label>
+                                                <br>
+
+                                                <script>
+                                                        add_Fashion_price();
+                                                </script>
+
+                                                Price:<input type="number" name="price_for_fashion" id="price_for_fashion" value="0.00" readonly>(INR)
+                                        </div>
+                                        <br>
+
+                                        
+                                        
+                                        <input type="checkbox" id="Electronics" name="Item_name" onclick="display_subitems_electronics()">
+                                        <label for="Item_name">Electronics</label>
+                                        
+                                        <div id="subitems_electronics" style="display: none;">
+                                                <label>
+                                                        <input type="checkbox" name="Electronics" value="20000.00">
+                                                        Smartphone
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Electronics" value="90000.00">
+                                                        Laptop
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Electronics" value="600.00">
+                                                        Charger
+                                                </label>
+
+                                                <label>
+                                                        <input type="checkbox" name="Electronics" value="2500.00">
+                                                        Head phones
+                                                </label>
+                                                <br>
+
+                                                <script>
+                                                        add_electronics_price();
+                                                </script>
+
+                                                Price:<input type="number" name="price_for_electronics" id="price_for_electronics" value="0.00" readonly>(INR)
+                                        </div>
+
+                                        <br>
+                                        
+
+
+                                </div>
+                        </div>
+
+
+
+
+
+
+
+                        <!-- place order(button)
+                                onclick - payment mode -- onclick
+                                                                radio buttons:Bhim upi , Credit Card ,Net banking
+                                                on choosing one payment mode:
+                                                a) Bhim upi - radio buttons() : 1) google pay
+                                                                                2)phone pay
+                                                                                3) paytm
+                                                                                4)
+                                                b) Credit Card - radio buttons() :      1)
+                                                                                        2)
+                                                                                        3) 
+                                                                                        4)
+
+                                                c) Net banking - radio buttons() :      1)
+                                                                                        2)
+                                                                                        3) 
+                                                                                        4)
+
+                                                d) COD -- onclick dialog box--address is confirmed or not 
+   
+                                After choosing payment mode -> confirm order option
+                                        -->
+                        <div id="place_order" style="display: none;">
+                                <button id="place_order_button" onclick="calculate_prices();" class="button" style="vertical-align: middle;">
+                                        Place Order
+                                </button>
+
+                                <div id="price" style="display: none;">
+                                        <br><br><br><br><br>
+                                        Total Price: <input class="w3-input w3-border" name="Total_Price" id="totalprice" type="number"  value="0.00">(INR)<br>
+                                        <br>
+                                        GST : <input class="w3-input w3-border" name="GST" id="GST" type="number" readonly value="0.00">(INR)<br>
+                                        <br>
+                                        Discount : <input class="w3-input w3-border" name="Discount" id="Discount" type="number" readonly value="0.00">(INR) <br>
+                                        <br>
+                                        Final Amount <input class="w3-input w3-border" name="Final_Amount" id="Final_Amount" type="number" readonly value="0.00"> (INR)
+                                </div>
+
+                        
+                                <div id="payment_option" style="display: none;">
+                                       <br><br>
+                                        <button id="payment_option_button" onclick="pay();" style="display: block; vertical-align: middle;"  class="button">
+                                                Proceed to Payment
+                                        </button>
+
+                                        <div id="after_payment" style="display: none;">
+                                               Amount to be paid <input id="amount_after_payment" type="number" readonly>
+                                                <br>
+                                                <!-- payment options -->
+                                                
+                                                <div class="tab">
+                                                        <button class="tablinks" onclick="openthis(event, 'net_banking')" id="defaultOpen">Net Banking</button>
+                                                        <button class="tablinks" onclick="openthis(event, 'credit_cards')">Credit Card</button>
+                                                        <button class="tablinks" onclick="openthis(event, 'upi')">UPI</button>
+                                                        <button class="tablinks" onclick="openthis(event, 'COD')">Cash on Delivery</button>
+                                                </div>
+
+
+                                                <div id="net_banking" class="tabcontent">
+                                                        <label>
+                                                                <select name="net_banking">
+                                                                        <option value="">--Choose your bank--</option>
+                                                                        <option value="SBI">SBI</option>
+                                                                        <option value="HDFC">HDFC</option>
+                                                                        <option value="AXIS">AXIS</option>
+                                                                </select>
+                                                        </label>
+
+                                                </div>
+                                                        
+                                                <div id="credit_cards" class="tabcontent">
+                                                        <label class="container">
+                                                                <img id="mastercard" alt="Master Card" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,e_trim/Mastercard_wqoea2"/>
+                                                                <input type="radio" name="credit_cards">
+                                                                <span class="checkmark"></span>
+                                                        </label>
+                                                                
+                                                        <br>
+                                                        
+                                                        <label class="container">
+                                                                <img id="Rupay" alt="Rupay" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,e_trim/Rupay_l3lnhg"/>
+                                                                <input type="radio" name="credit_cards">
+                                                                <span class="checkmark"></span>
+                                                        </label>
+
+
+                                                        <br>
+                                                </div>
+                                                        
+                                                <div id="upi" class="tabcontent">
+                                                        <label class="container">
+                                                                <img alt="Gpay" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/GooglePay_lh8a267"/>
+                                                                <input type="radio" name="upi">
+                                                                <span class="checkmark"></span>
+                                                        </label>
+                                                        <br>
+                                                        
+                                                        <label class="container">
+                                                                <img alt="Phone Pe" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/PhonePe_x1g54c7"/>
+                                                                <input type="radio" name="upi">
+                                                                <span class="checkmark"></span>
+                                                        </label>   
+                                                        <br>
+                                                        
+                                                        <label class="container">
+                                                                <img alt="BHIM" src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/BHIM_lkkvup7"/>
+                                                                <input type="radio" name="upi">
+                                                                <span class="checkmark"></span>
+                                                        </label> 
+                                                
+                                                        <br>
+                                                       
+                                                </div>
+
+                                                <div id="COD" class="tabcontent">
+                                                        
+                                                </div>
+
+                                                <script>
+                                                        function openthis(evt, Use) {
+                                                                var i, tabcontent, tablinks;
+                                                                tabcontent = document.getElementsByClassName("tabcontent");
+                                                                for (i = 0; i < tabcontent.length; i++) {
+                                                                tabcontent[i].style.display = "none";
+                                                                }
+                                                                tablinks = document.getElementsByClassName("tablinks");
+                                                                for (i = 0; i < tablinks.length; i++) {
+                                                                tablinks[i].className = tablinks[i].className.replace(" active", "");
+                                                                }
+                                                                document.getElementById(Use).style.display = "block";
+                                                                evt.currentTarget.className += " active";
+                                                
+                                                                var btnpay=document.getElementById("myBtn");
+                                                                btnpay.style.display="block";
+                                                        }
+                                                        
+                                                        // Get the element with id="defaultOpen" and click on it
+                                                        document.getElementById("defaultOpen").click();
+                                                </script>
+
+                                                <div id="myBtn">
+                                                        <br><br>
+                                                        <button onclick="confirm_payment();" class="button" style="vertical-align: middle;">Confirm Payment</button>
+                                                </div>
+
+                                                <!-- The Modal -->
+                                                <div id="myModal" class="modal">
+
+                                                        <!-- Modal content -->
+                                                        <div class="modal-content">
+                                                        <span class="close">&times;</span>
+                                                        <h1 id="finalh1" style="text-align: center;">Congratulations!! You have completed your transaction.</h1>
+                                                        <h3 id="finalh3" style="text-align: center;">Your order would be delivered at the specified address</h3>
+                                                        </div>
+                                                
+                                                </div>
+                                       
+                                                <script>
+                                                        // Get the modal
+                                                        var modal = document.getElementById("myModal");
+                                                        
+                                                        // Get the button that opens the modal
+                                                        var btn = document.getElementById("myBtn");
+                                                        
+                                                        // Get the <span> element that closes the modal
+                                                        var span = document.getElementsByClassName("close")[0];
+                                                        
+                                                        // When the user clicks the button, open the modal 
+                                                        btn.onclick = function() {
+                                                          modal.style.display = "block";
+                                                        }
+                                                        
+                                                        // When the user clicks on <span> (x), close the modal
+                                                        span.onclick = function() {
+                                                          modal.style.display = "none";
+                                                        }
+                                                        
+                                                        // When the user clicks anywhere outside of the modal, close it
+                                                        window.onclick = function(event) {
+                                                                if (event.target == modal) {
+                                                                        modal.style.display = "none";
+                                                                }
+                                                        }
+                                                </script>
+                                        </div>
+                                </div>
+                        </div>
+
+
+                </form>
+        </div>
+
+        
+</body>
+
+</html>
