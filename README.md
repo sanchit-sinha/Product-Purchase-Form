@@ -1,3 +1,4 @@
 # Product-Purchase-Form
+### This form could be used by shopkeepers to cater the public demand
 
-https://sam-92.github.io/Product-Purchase-Form/
+https://sanchit-sinha.github.io/Product-Purchase-Form/
